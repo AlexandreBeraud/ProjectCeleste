@@ -1046,6 +1046,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnObjecsScript
   aliments: {fileID: 11400000, guid: f463511a7a0c3bb4e8ed449ba8f20808, type: 2}
   spawnKey: 32
+  moveLeftKey: 276
+  moveRightKey: 275
+  moveSpeed: 5
+  limitMovement: 1
+  minX: -5
+  maxX: 5
+  movementEase: 1
 --- !u!4 &2034390635
 Transform:
   m_ObjectHideFlags: 0
