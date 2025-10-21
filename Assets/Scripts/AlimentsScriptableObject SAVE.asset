@@ -10,27 +10,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 222678d5f91d47c468f4bf481f83cd81, type: 3}
-  m_Name: AlimentsScriptableObject
+  m_Name: AlimentsScriptableObject SAVE
   m_EditorClassIdentifier: 
   aliments:
   - index: 0
-    name: Circle
-    prefab: {fileID: 8525896460791086210, guid: 5381761bbc475d64287c422d006a0f0a, type: 3}
-    points: 0
+    name: 9 Sliced
+    prefab: {fileID: 5403992520486868842, guid: cb9711566096fd04faeb8a00171a02f9, type: 3}
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 1
-    name: Square
-    prefab: {fileID: 1526810681048721222, guid: 18c98e64654efc740835aa66c7199f81, type: 3}
-    points: 0
+    name: Capsule
+    prefab: {fileID: 2224164968668411540, guid: 2cbba6a4f06ddfb428f34f862a81f6c3, type: 3}
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 2
+    name: Circle
+    prefab: {fileID: 8525896460791086210, guid: 5381761bbc475d64287c422d006a0f0a, type: 3}
+    sprite: {fileID: 0}
+    spawnSound: {fileID: 0}
+    destroySound: {fileID: 0}
+  - index: 3
+    name: Hexagon
+    prefab: {fileID: 3523288412189557717, guid: 512c13acf0f63d242b1249d2f78f396a, type: 3}
+    sprite: {fileID: 0}
+    spawnSound: {fileID: 0}
+    destroySound: {fileID: 0}
+  - index: 4
+    name: Isometric
+    prefab: {fileID: 1516917212475430287, guid: 013b19d7a53ee4b46a0758efe3a895c1, type: 3}
+    sprite: {fileID: 0}
+    spawnSound: {fileID: 0}
+    destroySound: {fileID: 0}
+  - index: 5
+    name: Square
+    prefab: {fileID: 1526810681048721222, guid: 18c98e64654efc740835aa66c7199f81, type: 3}
+    sprite: {fileID: 0}
+    spawnSound: {fileID: 0}
+    destroySound: {fileID: 0}
+  - index: 6
     name: Triangle
     prefab: {fileID: 5007839700254286130, guid: 395d03df85fa3af4ba72cca81291f27e, type: 3}
-    points: 0
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
