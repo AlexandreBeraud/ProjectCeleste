@@ -30,7 +30,11 @@ public class AlimentsController : MonoBehaviour
 
             if (nextAliment == null)
             {
-                Debug.Log($"No next item {nextIndex}.");
+                Destroy(gameObject);
+                Destroy(otherAliment.gameObject);
+                PointsSystemController.Instance?.AddScore(1000);
+                
+                Debug.Log($"Last item reached.");
                 return;
             }
 
