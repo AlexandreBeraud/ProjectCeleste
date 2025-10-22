@@ -17,48 +17,48 @@ MonoBehaviour:
     name: 9 Sliced
     prefab: {fileID: 5403992520486868842, guid: cb9711566096fd04faeb8a00171a02f9, type: 3}
     points: 10
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: e9abb049dff26ef4ebbf8626f8d4ace3, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 1
     name: Capsule
     prefab: {fileID: 2224164968668411540, guid: 2cbba6a4f06ddfb428f34f862a81f6c3, type: 3}
     points: 20
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 3e6ab514adfaf204c9e0a4fea01faa7d, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 2
     name: Circle
     prefab: {fileID: 8525896460791086210, guid: 5381761bbc475d64287c422d006a0f0a, type: 3}
     points: 40
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: b5411d3348cc6ec46a803153c0a5f2e0, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 3
     name: Hexagon
     prefab: {fileID: 3523288412189557717, guid: 512c13acf0f63d242b1249d2f78f396a, type: 3}
     points: 80
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 2096084e3cc4dc04ca98dd2c84a5a497, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 4
     name: Isometric
     prefab: {fileID: 1516917212475430287, guid: 013b19d7a53ee4b46a0758efe3a895c1, type: 3}
     points: 160
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 1db86cc76509e6644bcf815dbf418e3e, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 5
     name: Square
     prefab: {fileID: 1526810681048721222, guid: 18c98e64654efc740835aa66c7199f81, type: 3}
     points: 320
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 91a2f2908e7b2df4d83b9cb1d58cf0f5, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 6
     name: Triangle
     prefab: {fileID: 5007839700254286130, guid: 395d03df85fa3af4ba72cca81291f27e, type: 3}
     points: 640
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: fcd35c948864bdc4e8ca953989251b42, type: 3}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}

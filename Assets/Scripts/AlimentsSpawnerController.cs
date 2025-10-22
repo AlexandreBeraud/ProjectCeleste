@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class AlimentsSpawnerController : MonoBehaviour
@@ -10,61 +11,78 @@ public class AlimentsSpawnerController : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private KeyCode moveLeftKey = KeyCode.LeftArrow;
     [SerializeField] private KeyCode moveRightKey = KeyCode.RightArrow;
-    [SerializeField] private float moveSpeed = 5f;         // Vitesse de déplacement
+    [SerializeField] private float moveDistance = 2f;
+    [SerializeField] private float moveDuration = 0.2f;
     [SerializeField] private bool limitMovement = true;
+    [SerializeField] private Ease movementEase = Ease.Linear;
     [SerializeField] private float minX = -5f;
     [SerializeField] private float maxX = 5f;
-    [SerializeField] private Ease movementEase = Ease.Linear;
+
+    [Header("UI")]
+    [SerializeField] private Image nextAlimentImage;
 
     private Tween moveTween;
+    private AlimentsScriptableObject.Aliment nextAliment;
+
+    void Start()
+    {
+        SelectNextAliment();
+    }
 
     void Update()
     {
-        SpawnAliments();
-        MoveSpawner();
+        HandleMovement();
+        HandleSpawn();
     }
 
-    private void SpawnAliments()
+    private void HandleSpawn()
     {
-        if (Input.GetKeyDown(spawnKey))
+        if (Input.GetKeyDown(spawnKey) && nextAliment != null)
         {
-            int randomIndex = Random.Range(0, aliments.Aliments.Count);
-            var alimentToSpawn = aliments.GetAlimentByIndex(randomIndex);
-
-            GameObject spawned = Instantiate(alimentToSpawn.Prefab, transform.position, transform.rotation);
+            GameObject spawned = Instantiate(nextAliment.Prefab, transform.position, transform.rotation);
 
             var controller = spawned.GetComponent<AlimentsController>();
             if (controller != null)
             {
-                controller.SetIndex(alimentToSpawn.Index);
+                controller.SetIndex(nextAliment.Index);
                 controller.SetAlimentsData(aliments);
             }
 
-            Debug.Log($"{alimentToSpawn.Name} spawned");
+            Debug.Log($"{nextAliment.Name} spawned");
+
+            SelectNextAliment();
         }
     }
 
-    private void MoveSpawner()
+    private void HandleMovement()
     {
-        float horizontalInput = 0f;
-
-        if (Input.GetKey(moveLeftKey))
-            horizontalInput -= 1f;
-        if (Input.GetKey(moveRightKey))
-            horizontalInput += 1f;
-
-        if (Mathf.Approximately(horizontalInput, 0f))
+        if (moveTween != null && moveTween.IsActive() && moveTween.IsPlaying())
             return;
 
-        float targetX = transform.position.x + horizontalInput * moveSpeed * Time.deltaTime;
+        float targetX = transform.position.x;
+
+        if (Input.GetKey(moveLeftKey))
+            targetX -= moveDistance * Time.deltaTime * 5f;
+        else if (Input.GetKey(moveRightKey))
+            targetX += moveDistance * Time.deltaTime * 5f;
 
         if (limitMovement)
             targetX = Mathf.Clamp(targetX, minX, maxX);
 
-        // Kill l'ancien tween si actif pour éviter accumulation
-        if (moveTween != null && moveTween.IsActive())
-            moveTween.Kill();
+        transform.position = Vector3.Lerp(transform.position, new Vector3(targetX, transform.position.y, transform.position.z), moveDuration);
+    }
 
-        moveTween = transform.DOMoveX(targetX, 0.1f).SetEase(movementEase);
+    private void SelectNextAliment()
+    {
+        int randomIndex = Random.Range(0, aliments.Aliments.Count);
+        nextAliment = aliments.GetAlimentByIndex(randomIndex);
+
+        if (nextAlimentImage != null && nextAliment != null)
+        {
+            nextAlimentImage.sprite = nextAliment.Sprite;
+            nextAlimentImage.color = Color.white;
+        }
+
+        Debug.Log($"Next aliment: {nextAliment.Name}");
     }
 }
