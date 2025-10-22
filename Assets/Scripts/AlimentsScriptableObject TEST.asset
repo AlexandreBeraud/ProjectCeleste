@@ -16,21 +16,21 @@ MonoBehaviour:
   - index: 0
     name: Circle
     prefab: {fileID: 8525896460791086210, guid: 5381761bbc475d64287c422d006a0f0a, type: 3}
-    points: 0
+    points: 10
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 1
     name: Square
     prefab: {fileID: 1526810681048721222, guid: 18c98e64654efc740835aa66c7199f81, type: 3}
-    points: 0
+    points: 100
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
   - index: 2
     name: Triangle
     prefab: {fileID: 5007839700254286130, guid: 395d03df85fa3af4ba72cca81291f27e, type: 3}
-    points: 0
+    points: 550
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}

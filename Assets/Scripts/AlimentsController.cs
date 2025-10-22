@@ -25,8 +25,6 @@ public class AlimentsController : MonoBehaviour
             hasMerged = true;
             otherAliment.hasMerged = true;
 
-            Debug.Log($"Merge detected : index {alimentIndex}");
-
             int nextIndex = alimentIndex + 1;
             var nextAliment = alimentsData.GetAlimentByIndex(nextIndex);
 
@@ -41,10 +39,9 @@ public class AlimentsController : MonoBehaviour
                 AudioSource.PlayClipAtPoint(currentAliment.DestroySound, transform.position);
 
             Vector3 spawnPos = (transform.position + otherAliment.transform.position) / 2f;
-
             GameObject newObj = Instantiate(nextAliment.Prefab, spawnPos, Quaternion.identity);
 
-            AlimentsController newController = newObj.GetComponent<AlimentsController>();
+            var newController = newObj.GetComponent<AlimentsController>();
             if (newController != null)
             {
                 newController.SetIndex(nextAliment.Index);
@@ -54,20 +51,15 @@ public class AlimentsController : MonoBehaviour
             if (nextAliment.SpawnSound != null)
                 AudioSource.PlayClipAtPoint(nextAliment.SpawnSound, spawnPos);
 
+            PointsSystemController.Instance?.AddScore(nextAliment.Points);
+
             Destroy(gameObject);
             Destroy(otherAliment.gameObject);
 
-            Debug.Log($"Merged : {nextAliment.Name} créé !");
+            Debug.Log($"Merged : {nextAliment.Name} créé ! (+{nextAliment.Points} points)");
         }
     }
 
-    public void SetIndex(int index)
-    {
-        alimentIndex = index;
-    }
-
-    public void SetAlimentsData(AlimentsScriptableObject data)
-    {
-        alimentsData = data;
-    }
+    public void SetIndex(int index) => alimentIndex = index;
+    public void SetAlimentsData(AlimentsScriptableObject data) => alimentsData = data;
 }
