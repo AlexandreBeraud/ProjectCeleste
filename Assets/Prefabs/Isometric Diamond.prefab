@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd79c5419055bc24aad34bf268731291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alimentsData: {fileID: 0}
+  alimentIndex: 0
   boxCollider: {fileID: 1471782795449219034}
 --- !u!212 &6825324088258584621
 SpriteRenderer:
@@ -152,5 +154,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 56
   m_CollisionDetection: 0
