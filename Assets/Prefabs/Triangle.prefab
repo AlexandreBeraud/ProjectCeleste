@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -4527572320203709902}
   - component: {fileID: 631770098733827925}
   - component: {fileID: 2305927451830343550}
-  - component: {fileID: 1640197878337825786}
+  - component: {fileID: 7630539847947545251}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Triangle
@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alimentsData: {fileID: 0}
   alimentIndex: 0
-  boxCollider: {fileID: 1640197878337825786}
+  boxCollider: {fileID: 0}
 --- !u!212 &631770098733827925
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
---- !u!65 &1640197878337825786
+--- !u!65 &7630539847947545251
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
