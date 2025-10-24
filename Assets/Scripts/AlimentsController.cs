@@ -4,7 +4,6 @@ public class AlimentsController : MonoBehaviour
 {
     [SerializeField] private AlimentsScriptableObject alimentsData;
     [SerializeField] private int alimentIndex;
-    [SerializeField] private BoxCollider boxCollider;
 
     private bool hasMerged = false;
 

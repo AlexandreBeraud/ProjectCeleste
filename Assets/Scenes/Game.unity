@@ -1382,6 +1382,74 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1613080280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613080282}
+  - component: {fileID: 1613080281}
+  - component: {fileID: 1613080283}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1613080281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613080280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe2892e38a8a024d877c471fa45e0ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandAlimentController
+  handPowerUpKey: 104
+  pointsSystemController: {fileID: 432702617}
+  costPoints: 100
+--- !u!4 &1613080282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613080280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.64492, y: -1.11205, z: 2.72}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613080283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613080280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba6591caba7d6142a8730433ce3d782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BombController
+  bombData: {fileID: 11400000, guid: 56901ffda929f444c8f10e99346bb2bf, type: 2}
+  bombPrefabs:
+  - {fileID: 1805648527288635329, guid: ec85cafda091ed24a953951dde4b1274, type: 3}
+  - {fileID: 1805648527288635329, guid: 14290c0aa7ee26548bc22fd2b198cda8, type: 3}
+  - {fileID: 1805648527288635329, guid: 81b04e4658218bc478557a12df7e623d, type: 3}
+  bombKeys: 010100000201000003010000
+  spawnPoint: {fileID: 2034390635}
+  pointsSystemController: {fileID: 432702617}
 --- !u!1 &1677944033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,3 +1876,4 @@ SceneRoots:
   - {fileID: 2034390635}
   - {fileID: 1441246508}
   - {fileID: 432702618}
+  - {fileID: 1613080282}

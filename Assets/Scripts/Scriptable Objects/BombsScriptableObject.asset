@@ -20,17 +20,17 @@ MonoBehaviour:
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
-  - level: 0
+  - level: 1
     name: Super Bomb
     prefab: {fileID: 0}
     costPoints: 1000
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
-  - level: 0
+  - level: 2
     name: Hyper Bomb
     prefab: {fileID: 0}
-    costPoints: 5000
+    costPoints: 2500
     sprite: {fileID: 0}
     spawnSound: {fileID: 0}
     destroySound: {fileID: 0}
