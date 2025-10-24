@@ -13,6 +13,8 @@ public class PointsSystemController : MonoBehaviour
     [SerializeField] private int actualScore;
     [SerializeField] private int bestScore;
 
+    public int ActualScore { get => actualScore; set => actualScore = value; }
+    
     private void Awake()
     {
         if (Instance == null)
@@ -42,6 +44,12 @@ public class PointsSystemController : MonoBehaviour
             SaveBestScore();
         }
 
+        UpdateUI();
+    }
+
+    public void SubScore(int points)
+    {
+        actualScore -= points;
         UpdateUI();
     }
 
