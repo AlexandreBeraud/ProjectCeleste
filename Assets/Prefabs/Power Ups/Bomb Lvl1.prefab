@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BombPowerUp
   bombData: {fileID: 11400000, guid: 56901ffda929f444c8f10e99346bb2bf, type: 2}
   boxCollider: {fileID: 8392116997874677925}
-  explosionParticleSystem: {fileID: 0}
+  explosionParticleSystem: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   bombLevel: 1
 --- !u!212 &3492395647932050334
 SpriteRenderer:
