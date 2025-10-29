@@ -5,6 +5,9 @@ public class HandAlimentController : MonoBehaviour
     [SerializeField] private KeyCode handPowerUpKey;
     [SerializeField] private PointsSystemController pointsSystemController;
     [SerializeField] private int costPoints;
+    
+    public KeyCode HandPowerUpKey { get => handPowerUpKey; set => handPowerUpKey = value; }
+
 
     private void Update()
     {

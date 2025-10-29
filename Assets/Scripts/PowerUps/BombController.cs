@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BombController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class BombController : MonoBehaviour
 
     [Header("Score System")]
     [SerializeField] private PointsSystemController pointsSystemController;
+    
+    public List<KeyCode> BombKeys { get => bombKeys; set => bombKeys = value; }
+
 
     private void Update()
     {

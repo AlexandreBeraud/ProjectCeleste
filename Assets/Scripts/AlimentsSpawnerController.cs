@@ -25,6 +25,12 @@ public class AlimentsSpawnerController : MonoBehaviour
     private AlimentsScriptableObject.Aliment nextAliment;
     
     public static AlimentsSpawnerController Instance;
+    
+    public KeyCode SpawnKey { get => spawnKey; set => spawnKey = value; }
+    public KeyCode MoveLeftKey { get => moveLeftKey; set => moveLeftKey = value; }
+    public KeyCode MoveRightKey { get => moveRightKey; set => moveRightKey = value; }
+
+
 
     private void Awake()
     {
