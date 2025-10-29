@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 568581180728263319}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Square
+  m_TagString: Aliments
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alimentsData: {fileID: 0}
   alimentIndex: 0
-  boxCollider: {fileID: 2420995838249439159}
 --- !u!212 &2836634119316830281
 SpriteRenderer:
   m_ObjectHideFlags: 0

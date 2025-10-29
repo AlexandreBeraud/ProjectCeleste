@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7630539847947545251}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Triangle
+  m_TagString: Aliments
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alimentsData: {fileID: 0}
   alimentIndex: 0
-  boxCollider: {fileID: 0}
 --- !u!212 &631770098733827925
 SpriteRenderer:
   m_ObjectHideFlags: 0

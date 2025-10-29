@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6219424445008198859}
   m_Layer: 0
   m_Name: Isometric Diamond
-  m_TagString: Isometric
+  m_TagString: Aliments
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alimentsData: {fileID: 0}
   alimentIndex: 0
-  boxCollider: {fileID: 0}
 --- !u!212 &6825324088258584621
 SpriteRenderer:
   m_ObjectHideFlags: 0
