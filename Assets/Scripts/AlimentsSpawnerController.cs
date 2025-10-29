@@ -89,7 +89,7 @@ public class AlimentsSpawnerController : MonoBehaviour
 
     public void SelectNextAliment()
     {
-        int randomIndex = Random.Range(0, aliments.Aliments.Count);
+        int randomIndex = Random.Range(0, aliments.Aliments.Count - 1);
         nextAliment = aliments.GetAlimentByIndex(randomIndex);
 
         if (nextAlimentImage != null && nextAliment != null)
