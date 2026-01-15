@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SettingsMenuController : MonoBehaviour
 {
+    [SerializeField] private AudioMixer audioMixer;
+    
     public void SetVolume(float volume)
     {
-        Debug.Log(volume);
+        audioMixer.SetFloat("Volume", volume);
     }
 }
