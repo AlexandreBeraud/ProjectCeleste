@@ -27,8 +27,7 @@ public class BombPowerUp : MonoBehaviour
         // Effets visuels et sonores
         Instantiate(explosionParticleSystem, transform.position, Quaternion.identity);
 
-        if (bombInfo.DestroySound != null)
-            AudioSource.PlayClipAtPoint(bombInfo.DestroySound, transform.position);
+        AudioManager.instance.PlaySFX(bombInfo.DestroySound, transform.position);
 
         DestroyAliments(bombInfo);
         Destroy(gameObject);

@@ -38,8 +38,7 @@ public class AlimentsController : MonoBehaviour
             }
 
             var currentAliment = alimentsData.GetAlimentByIndex(alimentIndex);
-            if (currentAliment?.DestroySound != null)
-                AudioSource.PlayClipAtPoint(currentAliment.DestroySound, transform.position);
+            AudioManager.instance.PlaySFX(currentAliment.DestroySound, transform.position);
 
             Vector3 spawnPos = (transform.position + otherAliment.transform.position) / 2f;
             GameObject newObj = Instantiate(nextAliment.Prefab, spawnPos, Quaternion.identity);
@@ -52,7 +51,7 @@ public class AlimentsController : MonoBehaviour
             }
 
             if (nextAliment.SpawnSound != null)
-                AudioSource.PlayClipAtPoint(nextAliment.SpawnSound, spawnPos);
+                AudioManager.instance.PlaySFX(nextAliment.SpawnSound, spawnPos);
 
             PointsSystemController.Instance?.AddScore(nextAliment.Points);
 
