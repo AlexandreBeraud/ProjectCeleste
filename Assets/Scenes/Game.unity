@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuController
   pauseMenuUI: {fileID: 149646723}
-  optionsMenuUI: {fileID: 0}
+  optionsMenuUI: {fileID: 1517943995}
 --- !u!1 &144990950
 GameObject:
   m_ObjectHideFlags: 0
